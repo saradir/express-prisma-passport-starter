@@ -1,10 +1,9 @@
 import express from "express";
 import session from "express-session";
 import passport from "passport";
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "./lib/prisma;
 import { PrismaSessionStore } from "@quixo3/prisma-session-store";
 
-const prisma = new PrismaClient();
 const app = express();
 
 app.use(express.urlencoded({ extended: false }));
